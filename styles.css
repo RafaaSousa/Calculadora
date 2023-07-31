@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Tektur:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito&family=Tektur:wght@700&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -7,46 +10,102 @@ body {
     background-color: #777777;
 }
 
+.conteiner{
+    display: grid;
+    justify-items: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Tektur', cursive;
+    font-size: 2em;
+
+    animation: grow-and-shrink 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 .calculator {
     width: 300px;
-    background-color: #fff;
+    background-color: #2b2b2b;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+
+    
 }
 
 #display {
     width: -webkit-fill-available;
     padding: 10px;
     font-size: 20px;
+    background-color: #585858;
     text-align: right;
+    color: #000000;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Tektur', cursive;
+    font-size: 30px;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    justify-items: center;
+
+    
 }
 
 .btn {
-    width: 100%;
-    padding: 15px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
     font-size: 16px;
     text-align: center;
     border: none;
     background-color: #f0f0f0;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Tektur', cursive;
+    font-size: 20px;
 }
 
-.btn:nth-child(19){
+.btn:nth-child(17){
     grid-column: span 2;
+    border-radius: 40px;
+    width: 145px;
+}
+
+.btn:nth-child(19), .btn:nth-child(16), .btn:nth-child(12), .btn:nth-child(8), .btn:nth-child(4){
+    background-color:#f77205;
+}
+
+.btn:nth-child(1), .btn:nth-child(2), .btn:nth-child(3){
+    background-color:#8a8a8a;
 }
 
 .btn:hover {
-    background-color: #e0e0e0;
+    background-color: #bebebe;
 }
